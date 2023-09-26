@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Mayo - Resume</title>
+</head>
+<style>
+    :root{
+        --bg-color : #f2f2f2;
+        --text-color : #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color : #000000;
+            --text-color : #f2f2f2;
+        }
+        
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 0px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 0px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        border-radius: 8px;
+        width: 100px;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        margin: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    button:hover {
+        background-color: #3e8e41;
+    }
+
+    button:active {
+        background-color: #3e8e41;
+        transform: translateY(4px);
+    }
+</style>
+<body>
+    <h1>John Mayo</h1>
+    <h2>Computer Science Major</h2>
+    <h3>New Jersey Institute of Technology</h3>
+<br><br>
+    <h3>Resume</h3>
+    <button id="pdf">PDF</button><br>
+    <button id="docx">DOCX</button><br>
+    <button id="txt">TXT</button><br>
+    <button id="rtf">RTF</button><br>
+    <button id="odt">ODT</button>
+
+</body>
+<script>
+    const folder = "./resumes/"
+    const name = "Resume - 09_26_23"
+
+    document.getElementById("pdf").addEventListener("click", function(){
+        window.open(folder + name + ".pdf", "_blank");
+    });
+
+    document.getElementById("docx").addEventListener("click", function(){
+        window.open(folder + name + ".docx", "_blank");
+    });
+
+    document.getElementById("txt").addEventListener("click", function(){
+        window.open(folder + name + ".txt", "_blank");
+    });
+
+    // rtf
+    document.getElementById("rtf").addEventListener("click", function(){
+        window.open(folder + name + ".rtf", "_blank");
+    });
+
+    // odt
+    document.getElementById("odt").addEventListener("click", function(){
+        window.open(folder + name + ".odt", "_blank");
+    });
+</script>
+</html>
